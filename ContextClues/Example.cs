@@ -4,6 +4,7 @@ using UnityEngine;
 static class Example
 {
     public static bool Loaded = SRModLoader.IsModPresent("contextclues");
+    // The reason to separate the function call like this is so that if the Context Clues mod is missing, it does not cause errors and will simply return null
     public static GameObject CreateClue(System.Func<string> text)
     {
         if (Loaded)
